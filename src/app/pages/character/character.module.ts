@@ -11,7 +11,7 @@ import { CharacterComponent } from './character/character.component';
   ],
   imports: [
     CommonModule,
-    CharacterRoutingModule
+    CharacterRoutingModule,
   ]
 })
 export class CharacterModule { }

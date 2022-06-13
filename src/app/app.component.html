@@ -1,28 +1,14 @@
 
 <div class="app">
   <div class="app__container">
-    <div class="app__nav-bar">
-      <div class="app__nav-bar__navigation">
-        <a class="app__nav-bar__navigation__btn" [routerLink]="['/characters/list', 'new']">
-          <p> characters</p>
-        </a>
-        <a class="app__nav-bar__navigation__btn" [routerLink]="['/locations']">
-          <p> locations</p>
-        </a>
-        <a class="app__nav-bar__navigation__btn" [routerLink]="['/episodes']" >
-          <p> episodes </p>
-        </a>
-      </div>
-      <input [formControl]="searchInput" class="app__nav-bar__search" type="text">
-    </div>
-    
+
+    <app-nav-bar></app-nav-bar>
+
     <div class="app__content">
 
-      <div *ngIf="frontPage" class="app__content__front-page">
-        <img src="assets/portada.png" alt="">
-      </div>
+      <app-front-page [display]="display"></app-front-page>
 
-      <div *ngIf="!frontPage" class="app__content__reverse">
+      <div *ngIf="!display" class="app__content__reverse">
         <router-outlet></router-outlet>
       </div>
 

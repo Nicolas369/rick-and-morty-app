@@ -1,0 +1,14 @@
+<div class="nav-bar">
+    <div class="nav-bar__navigation">
+      <a class="nav-bar__navigation__btn" [routerLink]="['/characters/list', 'new']">
+        <p> characters</p>
+      </a>
+      <a class="nav-bar__navigation__btn" [routerLink]="['/locations']">
+        <p> locations</p>
+      </a>
+      <a class="nav-bar__navigation__btn" [routerLink]="['/episodes']" >
+        <p> episodes </p>
+      </a>
+    </div>
+    <input [formControl]="searchInput" class="nav-bar__search" type="text">
+  </div>

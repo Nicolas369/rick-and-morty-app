@@ -7,6 +7,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EpisodesService } from 'src/app/services/episodes.service';
 import { CharactersService } from 'src/app/services/characters.service';
 import { HttpInterceptorService } from 'src/app/services/http-interceptor.service';
+import { EffectsModule } from '@ngrx/effects';
+import { EpisodesEffects } from 'src/app/state/effects/episodes.effects';
 
 
 @NgModule({
@@ -17,6 +19,7 @@ import { HttpInterceptorService } from 'src/app/services/http-interceptor.servic
     CommonModule,
     EpisodesRoutingModule,
     HttpClientModule,
+    EffectsModule.forFeature([EpisodesEffects])
   ],
   providers: [
     EpisodesService,

@@ -11,24 +11,15 @@ import { SearchService } from './services/search.service';
 })
 export class AppComponent {
   title = 'Rick & Morty App';
-  frontPage = true;
-
-  searchInput = new FormControl();
-
+  display = true;
 
   constructor( private router: Router, private search: SearchService) {
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      this.frontPage = event.url === '/';
-      this.searchInput.setValue('');
+      this.display = event.url === '/';
     } );
-    
-    this.searchInput.valueChanges.subscribe(
-      val => this.search.searchPerPAge(val)
-    );
-
   }
 
 }
