@@ -1,0 +1,19 @@
+<div class="page-changer">
+    <button class="page-changer__btn"  (click)="prevPage()">
+        <span *ngIf="info.prev"> ⫷ </span>
+        <span *ngIf="!info.prev"> ✖ </span>
+    </button>
+    <button class="page-changer__btn"  (click)="nextPage()">
+        <span *ngIf="info.next"> ⫸ </span>
+        <span *ngIf="!info.next"> ✖ </span>
+    </button>
+</div>
+
+
+<div class="location-list">
+    <div *ngFor="let location of locations$ | async">
+        <app-location-card [location]="location"></app-location-card>
+    </div>
+</div>
+
+<div class="divider"></div>

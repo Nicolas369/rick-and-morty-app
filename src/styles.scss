@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+    background-color: #0D0208;
+    color: #50FF00;
+}
+
+a, button {
+    cursor: pointer;
+}

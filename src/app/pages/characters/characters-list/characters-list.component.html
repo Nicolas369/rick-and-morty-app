@@ -1,0 +1,24 @@
+
+
+<div class="page-changer">
+    <button class="page-changer__btn" (click)="prevPage()" [disabled]="!info.prev" > 
+        <span *ngIf="info.prev"> ⫷ </span>
+        <span *ngIf="!info.prev"> ✖ </span>
+    </button>
+    <button class="page-changer__btn" (click)="nextPage()" [disabled]="!info.next" > 
+        <span *ngIf="info.next"> ⫸ </span>
+        <span *ngIf="!info.next"> ✖ </span>
+    </button>
+</div>
+
+<div class="list" >
+    <div  *ngFor="let character of characters$ | async">
+        <app-card  
+            [name]="character.name" 
+            [img]="character.image" 
+            [spicies]="character.species"
+            [id]="character.id" 
+        ></app-card>  
+    </div>
+</div>
+<div class="divider"></div>

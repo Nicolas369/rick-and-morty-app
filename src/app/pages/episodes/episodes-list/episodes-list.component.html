@@ -1,0 +1,36 @@
+
+<div>
+    <div class="page-changer">
+        <button class="page-changer__btn" (click)="prevPage()" [disabled]="!info.prev" >
+            <span *ngIf="info.prev"> ⫷ </span>
+            <span *ngIf="!info.prev"> ✖ </span>
+        </button>
+        <button class="page-changer__btn" (click)="nextPage()" [disabled]="!info.next" >
+            <span *ngIf="info.next"> ⫸ </span>
+            <span *ngIf="!info.next"> ✖ </span>
+        </button>
+    </div>
+    
+    <ul>
+        <li *ngFor="let item of episodes$ | async" class="episodes__list-item" >
+
+            <table>
+                <thead>
+                    <th>Episode name</th>
+                    <th>Episode number</th>
+                    <th>Episode release</th>
+                </thead>
+                <tbody>
+                    <td>{{item.name}}</td>
+                    <td>{{item.episode}}</td>
+                    <td>{{item.air_date}}</td>
+                </tbody>
+            </table>
+
+            <a (click)="requestListOfCharacters(item.characters)" [routerLink]="['/characters']" class="episodes__list-item__link"> 
+                Characters ⫸ 
+            </a>
+        </li>
+    </ul>
+</div>
+<hr class="divider">

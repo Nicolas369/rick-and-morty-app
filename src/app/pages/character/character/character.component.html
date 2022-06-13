@@ -1,0 +1,58 @@
+
+
+<div class="character">
+
+    <!-- character image  -->
+    <div class="character__image__container">
+        <img src="{{character.image}}" alt="" class="character__image">
+    </div>
+    
+
+    <div class="character__info__container">
+        
+        <!-- Character name  -->
+        <div class="character__info__name">
+            <h1 > Name: {{character.name}}</h1>
+        </div>
+
+        <div class="character__info">
+
+            <!-- information  -->
+            <div>
+                <h3>Status: {{character.status || 'unknown'}}</h3>
+                <h3>Species: {{character.species || 'unknown'}}</h3>
+                <h3>Type: {{character.type || 'unknown'}}</h3>
+                <h3>Gender: {{character.gender || 'unknown'}}</h3>
+                <h3>Origin: {{character.origin.name || 'unknown'}}</h3>
+                <h3>Current Location: {{character.location.name || 'unknown'}}</h3>
+            </div>
+            
+            <!-- Episode box -->
+            <div class="character__info__episodes">
+                <div class="character__info__episodes__title">
+                    <span>
+                        Episodes:
+                    </span>
+                </div>
+            
+                <!-- Episode List -->
+                <div class="character__info__episodes__container">
+                    
+                    <p *ngFor="let episode of character.episode" 
+                        class="character__info__episodes__i">
+                        > episode: {{extractEpisodeNumber(episode)}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="back-btn__container">
+    <a [routerLink]="['/characters']" class="back-btn" >
+        back
+    </a>
+</div>

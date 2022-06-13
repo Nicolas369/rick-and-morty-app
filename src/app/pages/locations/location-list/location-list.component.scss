@@ -1,0 +1,38 @@
+.location-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+.page-changer {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+
+    &__btn {
+        width: 100px;
+        height: 30px;
+        font-weight: 700;
+        color: #50FF00;
+        border: 2px solid #008F11;
+        background-color: transparent;
+    }
+
+    &__btn:hover {
+        font-weight: 700;
+        color: #000000;
+        background-color: #50FF00;
+    }
+}
+
+.divider {
+    width: 100%;
+    height: 10px;
+    border: 0.1px  solid transparent;
+}
