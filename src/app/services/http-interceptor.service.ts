@@ -10,9 +10,9 @@ export class HttpInterceptorService implements HttpInterceptor {
   constructor() { }
 
   /**
-   * Normally this httpInterceptor would be used to add an authentication jwt to the query header,
+   * Normally this httpInterceptor would be used to add an authentication jwt to the request header,
    * like authorization: 'Bearer SOME_TOKEN'. 
-   * For reasons of avoiding any problem with CORS policies in this app-test, 
+   * For reasons of avoiding any problem with CORS policies in this app, 
    * an "Access-Control-Allow-Origin": all is added
    */
 
