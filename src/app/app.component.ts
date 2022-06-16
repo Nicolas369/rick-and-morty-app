@@ -1,6 +1,5 @@
-import { Component, ElementRef, OnChanges, SimpleChanges, ViewChild, AfterViewInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { SearchService } from './services/search.service';
 
