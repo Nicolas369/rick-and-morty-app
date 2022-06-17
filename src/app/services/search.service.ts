@@ -40,9 +40,16 @@ export class SearchService {
         this.store.select(locationInfoSelector).subscribe( info => this.infos.locations = this.setInfo(info));
 
         this.store.select(selectCharactersList).subscribe(list => {
-            if(this.lists.characters.page !== this.infos.characters) {
+            const page = this.router.url.split('/').pop();
+            if(this.lists.characters.page !== this.infos.characters && page === 'new') {
                 this.lists.characters.list = list;
                 this.lists.characters.page = this.infos.characters;
+            }
+            if (page !== 'new' && this.lists.characters.page !== -1) {
+                this.lists.characters.list = list;
+                this.lists.characters.list.length === 0
+                ? this.lists.characters.page = 0
+                : this.lists.characters.page = -1
             }
         })
         this.store.select(locationsSelcetor).subscribe(list => {
