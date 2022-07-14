@@ -12,8 +12,7 @@ export class AppComponent {
   title = 'Rick & Morty App';
   display = true;
 
-  constructor( private router: Router, private search: SearchService) {
-
+  constructor( private router: Router) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {

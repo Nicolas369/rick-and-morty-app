@@ -10,7 +10,6 @@ export const loadEpisodesNewPages = createAction(
     props<{ url: string}>()
 );
 
-
 export const addEpisodesList  = createAction(
     '[Episode List] Add Episode List with Info',
     props<{ episodes: EpisodeList}>()
