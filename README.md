@@ -9,7 +9,7 @@ Its goal is to show all the Rick & Morty characters, their episodes and planets.
 ```
 Used technology:
   > Angular 13
-  > NGRx
+  > Redux with NGRX
   > RxJS
   > TS
   > SASS
