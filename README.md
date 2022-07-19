@@ -6,6 +6,17 @@
 This is an application made in Angular 13.
 Its goal is to show all the Rick & Morty characters, their episodes and planets.
 
+```
+Used technology:
+  > Angular 13
+  > NGRx
+  > RxJS
+  > TS
+  > SASS
+  > HTTP-Interceptor
+  > API-REST
+```
+
 To run the application you need to have Angular CLI and Node.js installed.
 
 To use the application simply clone the repository to your local machine and run the `npm install` and `ng serve` commands in that order.
