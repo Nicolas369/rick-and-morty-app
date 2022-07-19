@@ -17,8 +17,10 @@ Used technology:
   > API-REST
 ```
 
-To run the application you need to have Angular CLI and Node.js installed.
+The Application manages a state of characters, locations and episodes with their respective pages. where an unnecessary query is not made unless the information is not in the store. 
+I also implemented an HTTP-Interceptor as a demonstration of where a possible place to put a JWT as authentication for each query would go.
 
+To run the application you need to have Angular CLI and Node.js installed.
 To use the application simply clone the repository to your local machine and run the `npm install` and `ng serve` commands in that order.
 
 Enjoy the application. 😃
